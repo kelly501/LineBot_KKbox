@@ -55,7 +55,7 @@ def show_type(access_token):
 
 
 def get_raking(chart, access_token, num: int = 5) -> list:
-    url = f"https://api.kkbox.com/v1.1/charts/{chart}/tracks"
+    url = "https://api.kkbox.com/v1.1/charts/"+chart+"/tracks"
     # 標頭
     headers = {
         "accept": "application/json",
