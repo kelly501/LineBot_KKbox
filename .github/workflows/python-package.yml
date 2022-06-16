@@ -4,12 +4,12 @@
 name: Python package
 
 on:
-  push:
-    schedule:
+  schedule:
       interval: "daily"
-      time: "23:05"
+      time: "23:17"
       # Use Japan Standard Time (UTC +09:00)
       timezone: "Asia/Taipei"
+  push:
     branches:
       - main
 jobs:
