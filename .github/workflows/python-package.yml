@@ -4,22 +4,13 @@
 name: Python package
 
 
-
 on:
-  create: 2
-  status:
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: "daily"
-      time: "23:54"
-      # Use Japan Standard Time (UTC +09:00)
-      timezone: "Asia/Taipei"
+  
   push:
     branches:
       - main
-#   schedule:
-#       - cron: '00 00 * * *'
+  schedule:
+      - cron: '00 00 * * *'
 # #       timezone:  "Asia/Taipei"
 # #       interval: "daily"
 # #       time: "23:20"
