@@ -5,12 +5,13 @@ name: Python package
 
 on:
   push:
-    schedule:
-      interval: "daily"
-      time: "23:20"
-      timezone: "Asia/Taipei"
     branches:
       - main
+  schedule:
+      - cron: '00 08 * * *'
+#       interval: "daily"
+#       time: "23:20"
+#       timezone: "Asia/Taipei"
 
 
 jobs:
