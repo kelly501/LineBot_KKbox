@@ -1,2 +1,2 @@
 # LineBot_KKbox
-每天早上八點定時抓取KKBOX流行排行榜，並發送到LINE上
+每天下午四點定時抓取KKBOX流行排行榜前五名，並發送到LINE上
