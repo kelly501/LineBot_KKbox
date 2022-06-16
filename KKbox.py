@@ -5,6 +5,14 @@ from linebot import LineBotApi
 import random
 from linebot.models import TextSendMessage
 
+import os
+
+LINE_UUID = os.environ['LINE_UUID']
+TOKEN = os.environ['TOKEN']
+CLIENT_ID = os.environ['CLIENT_ID']
+CLIENT_SECRET = os.environ['CLIENT_SECRET']
+
+
 # 取得憑證Token
 def get_token():
     headers = {
@@ -14,8 +22,8 @@ def get_token():
     # 參數
     data = {
         "grant_type": "client_credentials",
-        "client_id": "CLIENT_ID",
-        "client_secret": "CLIENT_SECRET"
+        "client_id": CLIENT_ID,
+        "client_secret": CLIENT_SECRET
     }
 
     r = requests.post('https://account.kkbox.com/oauth2/token', data=data, headers=headers)  # API網址取得憑證
@@ -83,8 +91,8 @@ if __name__ == '__main__':
         result.append(song_name)
         print(song_name)
 
-line_uuid = 'UUID'
-line_bot_api = LineBotApi('TOKEN')
+line_uuid = LINE_UUID
+line_bot_api = LineBotApi(TOKEN)
 line_bot_api.push_message(
     line_uuid,
     TextSendMessage(text = "流行音樂榜:"+"\n"+"1."+result[0]+"\n"+"2."+result[1]+"\n"+"3."+result[2]+"\n"+"4."+result[3]+"\n"+"5."+result[4]))
