@@ -4,14 +4,13 @@
 name: Python package
 
 on:
-  schedule:
-      interval: "daily"
-      time: "23:17"
-      # Use Japan Standard Time (UTC +09:00)
-      timezone: "Asia/Taipei"
   push:
     branches:
       - main
+  schedule:
+    interval: "daily"
+    time: "23:20"
+    timezone: "Asia/Taipei"
 jobs:
   build:
     runs-on: ubuntu-latest
