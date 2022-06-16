@@ -39,3 +39,5 @@ jobs:
       env:
         LINE_UUID: ${{ secrets.LINE_UUID }} 
         TOKEN: ${{ secrets.TOKEN }} 
+        CLIENT_ID: ${{ secrets.CLIENT_ID }} 
+        CLIET_SECRET: ${{ secrets.CLIENT_SECRET }} 
