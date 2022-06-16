@@ -40,4 +40,4 @@ jobs:
         LINE_UUID: ${{ secrets.LINE_UUID }} 
         TOKEN: ${{ secrets.TOKEN }} 
         CLIENT_ID: ${{ secrets.CLIENT_ID }} 
-        CLIET_SECRET: ${{ secrets.CLIENT_SECRET }} 
+        CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }} 
