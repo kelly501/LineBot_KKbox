@@ -5,12 +5,14 @@ name: Python package
 
 on:
   push:
+    schedule:
+      interval: "daily"
+      time: "23:20"
+      timezone: "Asia/Taipei"
     branches:
       - main
-  schedule:
-    interval: "daily"
-    time: "23:20"
-    timezone: "Asia/Taipei"
+
+
 jobs:
   build:
     runs-on: ubuntu-latest
